@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Checkout Rescue
 
-## Getting Started
+Checkout Rescue is a product management portfolio case study for reducing checkout drop-off after failed payment attempts. It combines a case study homepage, an interactive checkout recovery simulator, a product analytics dashboard, a PRD, and an experiment plan.
 
-First, run the development server:
+## Problem
+
+Failed payments often turn high-intent shoppers into abandoned checkouts. Users may see unclear error messages, restart checkout, retry the same payment method, or contact support because they do not know what went wrong or what to do next.
+
+This creates lost revenue, lower conversion, and reduced trust in the checkout experience.
+
+## Solution
+
+Checkout Rescue proposes a smart recovery layer for failed payments. When a payment fails, the flow explains the failure reason in clear language and recommends a one-tap alternative payment method based on checkout context such as cart value, delivery urgency, customer type, and wallet balance.
+
+## Key Features
+
+- Product case study homepage with problem, hypothesis, MVP scope, and portfolio navigation.
+- Interactive checkout simulator with context-aware recovery recommendations.
+- Static product analytics dashboard with KPIs, funnel metrics, failure reasons, and recovery method performance.
+- Product Requirements Document covering goals, scope, requirements, target users, risks, and success metrics.
+- Experiment plan covering hypothesis, A/B design, event tracking, rollout, guardrails, and decision rules.
+- Shared navigation and footer across all routes.
+
+## Routes
+
+- `/` - Case study homepage
+- `/simulator` - Interactive checkout recovery simulator
+- `/dashboard` - Checkout Health Dashboard
+- `/prd` - Product Requirements Document
+- `/experiment` - A/B testing and rollout plan
+
+## Tech Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+
+No external chart or UI libraries are used.
+
+## How To Run Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run quality checks:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## PM Skills Demonstrated
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Product discovery and problem framing
+- Checkout recovery user experience
+- Context-aware recommendation logic
+- Funnel and event instrumentation thinking
+- Product analytics and KPI definition
+- PRD writing and MVP scoping
+- Experiment design, rollout planning, and guardrail metrics
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Disclaimer
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is an independent portfolio case study and is not affiliated with Noon.
